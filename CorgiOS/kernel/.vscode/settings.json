@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "stddef.h": "c",
+        "compare": "cpp",
+        "cstdint": "cpp",
+        "format": "cpp",
+        "charconv": "cpp",
+        "chrono": "cpp",
+        "optional": "cpp",
+        "ratio": "cpp",
+        "system_error": "cpp",
+        "array": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "limits": "cpp",
+        "memory": "cpp"
+    }
+}

@@ -1,0 +1,37 @@
+Bug log:
+
+To note:
+    if its marked with indev it was never relesed.
+    if you inconter one with debug info please let me know.
+
+#1. The register panic problem:
+Problem: Register debugging is not correct on kernel panic screen.
+The cause: ???.
+Fix: ???.
+Resolved? no. (Removed register debugging.)
+Severity rating: 2/10 - kernel panics are rare anyways.
+Effects: 0.0.1 (Indev)
+
+#2. PS/2 Murder:
+Problem: Once system powered on sometimes if you use PS/2 keyboard/mouse it can disable one or both of the PS/2 devices or cause a kernel panic.
+The cause: Allowing user input during initializing.
+Fix: Disable PS/2 devices before enabling interrupts, then re-enable them after initializing the mouse and keyboard.
+Resolved? yes. (Reliability improved significantly!)
+severity rating: 5/10 - defeats the point of a compupter if you cant tell it what to do.
+Effects: 0.0.1 (Indev)
+
+#3. The Box Boogie:
+Problem: After adding cursor for some weird reson their is a weird black box in the top left corner.
+The cause: Calling clear cursor before calling draw cursor their for the list was never saved and it defualts to 0 and it draws 0.
+Fix: Adding cursor initialized then set it to true and return if its false and continue if its true.
+Resolved? kinda. (box deleted... Mostly you can still get it if you move the mouse continussly before the system starts.)
+severity rating: 3/10 - anoying but not really doing much.
+Effects: 0.0.1 (Indev)
+
+#4. Random GPFaults on boot -- The Sneaky Squirrel:
+Problem: Sometimes gp faults randomly happen on boot its only happened twice but its still a problem and it only happens after the first run after build for some reason then works fine?!?
+The cause: ???.
+Fix: ???.
+Resolved? No, but rare enough to ignore unless it happens twice in a row.
+severity rating: 8/10 - very anoying.
+Effects: 0.0.1 (Indev)
